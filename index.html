@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.weather-card {
+    display: flex;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+}
+
+/* Main weather info section (left) */
+.weather-main {
+    
+    background-size: cover;
+    background-position: center;
+    width: 60%; /* Takes up 60% of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.weather-temp h1 {
+    font-size: 8rem;
+    font-weight: 600;
+}
+
+.weather-temp p {
+    font-size: 2.5rem;
+}
+
+.weather-extra .date {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* Details section (right) */
+.details-section {
+    width: 40%; /* Takes up 40% of the screen */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(50px);
+  }
+  body {
+    background: url('./6574f5a1-c773-48ff-bcda-55f3be2e5e64.jpeg');
+    background-size: cover;
+  }
+
+.location-search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.location-search input {
+    width: 75%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.location-search button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #5a8dee;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.location-list {
+    list-style: none;
+}
+
+.location-list li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.location-list li:hover {
+    color: #5a8dee;
+}
+
+.details p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.details span {
+    font-weight: 600;
+    color: #eee95a;
+}
+
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="weather-card">
+            <!-- Weather Info Section -->
+            <div class="weather-main">
+                <div class="weather-temp">
+                    <h1 style="user-select: none;">08°</h1>
+                    <p>London</p>
+                </div>
+                <div class="weather-extra">
+                    <p class="date">6:09 PM - Sunday, 6 Oct 19</p>
+                    <div class="status">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/rain--v2.png" alt="Rainy">
+                        <p>Rainy</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location and Details Section -->
+            <div class="details-section">
+                <!-- Search for other locations -->
+                <div class="location-search">
+                    <input type="text" placeholder="Search another location...">
+                    <button>Go</button>
+                </div>
+                <!-- List of locations -->
+                <ul class="location-list">
+                    <li>Birmingham</li>
+                    <li>Manchester</li>
+                    <li>New York</li>
+                    <li>California</li>
+                </ul>
+                <!-- Additional Weather Details -->
+                <div class="details">
+                    <p>Cloudy: <span>86%</span></p>
+                    <p>Humidity: <span>62%</span></p>
+                    <p>Wind: <span>8km/h</span></p>
+                    <p>Rain: <span>8mm</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
